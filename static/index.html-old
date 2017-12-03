@@ -1,0 +1,12 @@
+<table style="margin-left: auto; margin-right: auto;" cellspacing="2" cellpadding="5">
+<tbody background="media/backgrounds/home-page-background.png">
+<tr>
+<td><button>Placeholder 1</button></td>
+<td><button>Placeholder 2</button></td>
+<td><button>Placeholder 3</button></td>
+<td><button>Placeholder 4</button></td>
+<td><button>Placeholder 5</button></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>

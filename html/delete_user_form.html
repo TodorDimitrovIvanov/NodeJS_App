@@ -1,0 +1,73 @@
+<!-- Form generated from this website: https://bootsnipp.com/forms -->
+<form class="form-horizontal" name="deleteUserForm">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<fieldset>
+
+<!-- Form Name -->
+<legend>Delete Customer Form</legend>
+
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="selectbasic">Select Customer </label>
+  <div class="col-md-6">
+    <select id="selectbasic" name="selectbasic" class="form-control">
+    <!-- We must add the Customers in this select list -->
+    </select>
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="deleteUserButton"></label>
+  <div class="col-md-4">
+    <button id="loadUserButton" name="loadUserButton" class="btn btn-warning">Load</button>
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="deleteUserButton"></label>
+  <div class="col-md-4">
+    <button id="deleteUserButton" name="deleteUserButton" class="btn btn-danger">Continue</button>
+  </div>
+</div>
+
+</fieldset>
+
+<script type="text/javascript">
+	
+	function update_user_list(){
+		var all_customers;
+		$.get("/customers/all", function(data, res){
+			alert(data);
+			//all_customers = data;
+		});
+	}
+
+	$("button#loadUserButton").click(function(){
+		var all_customers;
+		$.get("http://ec2-35-158-247-20.eu-central-1.compute.amazonaws.com:8080/customers/all", function(data, res){
+			alert(data);
+			//all_customers = data;
+		});
+	}
+	
+	$("button#deleteUserButton").click(function(){
+		if(confirm('Are you sure ?')){
+			/*$.ajax({
+				type: "GET",
+				url: "http://ec2-35-158-247-20.eu-central-1.compute.amazonaws.com:8080/customers/all",
+				success: 
+
+			});*/
+
+		}else{
+			window.location = "http://ec2-35-158-247-20.eu-central-1.compute.amazonaws.com:8080/"
+		}
+	});
+
+
+</script>
+
+</form>

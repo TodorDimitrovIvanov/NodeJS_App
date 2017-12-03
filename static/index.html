@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Bootstrap 3, from LayoutIt!</title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <link href="/static/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/style.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+  </head>
+  <body>
+  	<br>
+  	<br>
+    <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="row">
+				<div class="col-md-3">
+					 
+					<button type="button" class="btn btn-success btn-block">
+						List Users
+					</button>
+				</div>
+				<div class="col-md-3">
+					 
+					<button type="button" class="btn btn-block btn-info" id="AddUserButton">
+						Add User
+					</button>
+				</div>
+				<div class="col-md-3">
+					 
+					<button type="button" class="btn btn-block btn-warning" id="UpdateUserButton">
+						Update User
+					</button>
+				</div>
+				<div class="col-md-3">
+					 
+					<button type="button" class="btn btn-block btn-danger" id="RemoveUserButton">
+						Delete User
+					</button>
+				</div>
+			</div>
+			<br>
+			
+
+			<div class="progress progress-striped">
+				<div class="progress-bar progress-success">
+				</div>
+			</div>
+
+
+			<div class="jumbotron well">
+				<h2>
+					Disclaimer:
+				</h2>
+				<p>
+					Be extremly careful when using this tool as changes to the user list is final - deleting a user will remove it from the database for good!
+				</p>
+				<p>
+					<a class="btn btn-primary btn-large" href="#">Learn more</a>
+				</p>
+			</div>
+
+
+			<div id="interaction_container">
+				<table class="table" id="customer_table">
+					<thead>
+						<tr>
+							<th>
+								ID
+							</th>
+							<th>
+								User
+							</th>
+							<th>
+								Balance
+							</th>
+							<th>
+								Status
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								1
+							</td>
+							<td>
+								TB - Monthly
+							</td>
+							<td>
+								01/04/2012
+							</td>
+							<td>
+								Default
+							</td>
+						</tr>
+						<tr class="active">
+							<td>
+								1
+							</td>
+							<td>
+								TB - Monthly
+							</td>
+							<td>
+								01/04/2012
+							</td>
+							<td>
+								Approved
+							</td>
+						</tr>
+						<tr class="success">
+							<td>
+								2
+							</td>
+							<td>
+								TB - Monthly
+							</td>
+							<td>
+								02/04/2012
+							</td>
+							<td>
+								Declined
+							</td>
+						</tr>
+						<tr class="warning">
+							<td>
+								3
+							</td>
+							<td>
+								TB - Monthly
+							</td>
+							<td>
+								03/04/2012
+							</td>
+							<td>
+								Pending
+							</td>
+						</tr>
+						<tr class="danger">
+							<td>
+								4
+							</td>
+							<td>
+								TB - Monthly
+							</td>
+							<td>
+								04/04/2012
+							</td>
+							<td>
+								Call in to confirm
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+    <script src="/static/jquery.min.js"></script>
+    <script src="/static/bootstrap.min.js"></script>
+    <script src="/static/scripts.js"></script>
+    <script type="text/javascript">
+
+    	$("button#AddUserButton").click(function(){
+    		$("div#interaction_container").empty();
+    		$("div#interaction_container").load("/new_user_form.html");
+    	});
+
+    	/*$("button#NewUserPostButton").click(function(){
+    		var new_user_form_data = $("form#NewUserNameForm").serialize();
+    		if (new_user_form_data == ''){
+    			alert("The data from the form is empty!");
+    		}else{
+				$.post("ec2-52-58-37-32.eu-central-1.compute.amazonaws.com:8080/customers/create", new_user_form_data );		
+    			console.log(new_user_form_data); 
+
+    			$.ajax({
+    				type: "POST",
+    				url: "ec2-52-58-37-32.eu-central-1.compute.amazonaws.com:8080/customers/create",
+    				success: function(data){
+    					alert("Saved: " + data);
+    				}
+    			});
+    		}
+    	});*/
+
+    	$("button#UpdateUserButton").click(function(){
+    		$("div#interaction_container").empty();
+    		s
+    	});
+
+    	$("button#RemoveUserButton").click(function(){
+    		$("div#interaction_container").empty();
+    	});
+
+    </script>
+
+  </body>
+</html>

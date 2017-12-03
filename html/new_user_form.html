@@ -1,0 +1,50 @@
+<form class="form-horizontal" method="POST" action="/customers/create">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<fieldset>
+
+<!-- Form Name -->
+<legend>New Customer Information</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="newUserNameForm">Name</label>  
+  <div class="col-md-4">
+  <input id="newUserNameForm" name="newUserNameForm" type="text" placeholder="Full Name" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="newUserBalanceForm">Balance</label>  
+  <div class="col-md-4">
+  <input id="newUserBalanceForm" name="newUserBalanceForm" type="text" placeholder="Balance" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Multiple Radios (inline) -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Active">Active</label>
+  <div class="col-md-4"> 
+    <label class="radio-inline" for="Active-0">
+      <input type="radio" name="Active" id="Active" value="1" checked="checked">
+      True
+    </label> 
+    <label class="radio-inline" for="Active-1">
+      <input type="radio" name="Active" id="Active" value="0">
+      False
+    </label>
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="postButton"></label>
+  <div class="col-md-4">
+    <button id="postButton" name="postButton" class="btn btn-primary" >Post</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
